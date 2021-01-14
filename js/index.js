@@ -40,3 +40,39 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let nav = document.querySelectorAll("nav");
+nav.setAttribute('href', siteContent["nav"]["nav-item"])
+
+let cta = document.querySelector(".cta-text");
+cta.setAttribute("h1", siteContent["cta"]["h1"]);
+
+let ctaButton = document.querySelector(".cta-text");
+ctaButton.setAttribute("button", siteContent["cta"]["button"]);
+
+let ctaImg = document.querySelector("#cta-img");
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+const allH4 = document.querySelectorAll("h4");
+allH4.forEach(e => {
+  allH4.setAttribute("h4", siteContent["main-content"]["features-h4"]["about-h4"]["services-h4"]["product-h4"]["vision-h4"]);
+})
+
+const allContent = document.querySelectorAll("p");
+allContent.forEach(e => {
+  allContent.setAttribute("p", siteContent["main-content"]["features-content"]["about-content"]["services-content"]["product-content"]["vision-content"])
+})
+
+let midImg = document.querySelector(".middle-img");
+midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
+
+let contact = document.querySelector(".contact");
+contact.setAttribute("h4", siteContent["contact"]["contact-h4"]);
+
+const contactP = document.querySelectorAll("p");
+contactP.forEach(e=> {
+  contactP.setAttribute("p", siteContent["contact"]["address"]["phone"]["email"])
+})
+
+let footer = document.querySelector("footer");
+footer.setAttribute("copyright", siteContent["footer"]["copyright"]);
